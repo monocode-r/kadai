@@ -1,0 +1,161 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1644990106d0a18489": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "accent-2",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1644991917dabbafac": {
+      "type": "image-with-text",
+      "blocks": {
+        "1644991917e09091fb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "寄り添うWEB屋",
+            "heading_size": "h1"
+          }
+        },
+        "1644991917e09091fb-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>身近にWEBの知識を持つ人がいない。でも雇う余裕がないお客様の負担を少しでも減らすため、パートナーとして寄り添っていきます。親身になって問題解決からご提案まで、私の持つWEBの知識をフル活用して、ご協力させていただきます。<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1644991917e09091fb-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1644991917e09091fb-0",
+        "1644991917e09091fb-1",
+        "1644991917e09091fb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/kadai-portfolio.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16449906268b95fc5b": {
+      "type": "rich-text",
+      "blocks": {
+        "16449906263bcffa1d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "これからのEC時代に",
+            "heading_size": "h1"
+          }
+        },
+        "16449906263bcffa1d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>年々市場が拡大しているECサイトに、<br\/>これから参入したいお客様にとって、ネットショップの開設は必須になります。<\/p><p>でも多くの方がネットショップの開設がわからず挫折します。<br\/>そのお手伝いを私がさせて頂きますので、ご安心ください。<\/p>"
+          }
+        },
+        "16449906263bcffa1d-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "16449906263bcffa1d-0",
+        "16449906263bcffa1d-1",
+        "16449906263bcffa1d-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16449902350a36bb05": {
+      "type": "multicolumn",
+      "blocks": {
+        "1644990235d69ae571-0": {
+          "type": "column",
+          "settings": {
+            "title": "HTML&CSS",
+            "text": "<p>コーポレートサイトから御社にニーズに合わせたHTMLコーディングが可能です。また、CSS3を用いてご希望のデザインに仕上げていきます。また、SASSを使用することで保守性の高め更新のしやすさを追求しております。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1644990235d69ae571-1": {
+          "type": "column",
+          "settings": {
+            "title": "WordPress",
+            "text": "<p>テンプレートを利用したWordPressからオリジナルデザインのWordPressまで、お客様が更新しやすく、管理しやすいホームページへと仕上げていきます。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1644990235d69ae571-2": {
+          "type": "column",
+          "settings": {
+            "title": "EC-Shopify",
+            "text": "<p>越境ECサイトまで構築できるShopifyを用いてお客様のネットショップを開設します。ECサイトをお持ちでないお客様にはまずはテンプレートを使ったネットショップ開設から行い、ステップアップを考えるお客様にはカスタマイズをしたネットショップ作りのお手伝いをさせていただきます。<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1644990235d69ae571-0",
+        "1644990235d69ae571-1",
+        "1644990235d69ae571-2"
+      ],
+      "settings": {
+        "title": "Skill List",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1644990106d0a18489",
+    "1644991917dabbafac",
+    "16449906268b95fc5b",
+    "16449902350a36bb05"
+  ]
+}
