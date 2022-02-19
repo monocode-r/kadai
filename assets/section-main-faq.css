@@ -1,0 +1,62 @@
+.faq-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab-checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tabs {
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tab-label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  color: #fff;
+  font-weight: bold;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.tab-label::after {
+  content: ' + ';
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all .5s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  background-color: #fff;
+  color: #000;
+  transition: all .5s;
+}
+
+.tab-content p {
+  margin: 0;
+}
+
+.tab-checkbox:checked + .tab-label::after {
+  content: ' - ';
+}
+
+.tab-checkbox:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
