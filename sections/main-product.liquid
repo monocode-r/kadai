@@ -412,19 +412,19 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product-form__buttons">
+                    {% assign startTime = product.metafields.reminderDay.reminder | time_tag | date: "%s" %}
+                    {% assign nowTime = "now" | date: "%s" %}
+                    {% assign timeLag = nowTime | minus: startTime %}
                     <button
                       type="submit"
                       name="add"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    {% if timeLag <= 0 %}disabled{% endif %}
                     >
                         <span>
-                          {% assign startTime = product.metafields.reminderDay.reminder | time_tag | date: "%s" %}
-                          {% assign nowTime = "now" | date: "%s" %}
-                          {% assign timeLag = nowTime | minus: startTime %}
-
-                          {% if timeLag <= 0 %}
-                            {{ "27日から購入できます。" }}
+                            {% if timeLag <= 0 %}
+                            27日から購入できます。
                             {%- elsif product.selected_or_first_available_variant.available -%}
                               {{ 'products.product.add_to_cart' | t }}
                             {%- else -%}
