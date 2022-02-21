@@ -327,9 +327,16 @@
                                 form="{{ product_form_id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
+                          {% if product.variants[ forloop.index0 ].metafields.colorShirt.color %}
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                              style="background-color: {{ product.variants[ forloop.index0 ].metafields.colorShirt.color }}"
+                            >
+                            </label>
+                            {% else %}
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                              {{ value }}
+                            </label>
+                          {% endif %}
                         {%- endfor -%}
                       </fieldset>
                   {%- endfor -%}
@@ -412,10 +419,16 @@
                     {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
                         <span>
-                          {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
-                          {%- else -%}
-                            {{ 'products.product.sold_out' | t }}
+                          {% assign startTime = product.metafields.reminderDay.reminder | time_tag | date: "%s" %}
+                          {% assign nowTime = "now" | date: "%s" %}
+                          {% assign timeLag = nowTime | minus: startTime %}
+
+                          {% if timeLag <= 0 %}
+                            {{ "27日から購入できます。" }}
+                            {%- elsif product.selected_or_first_available_variant.available -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                              {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
                         </span>
                         <div class="loading-overlay__spinner hidden">
